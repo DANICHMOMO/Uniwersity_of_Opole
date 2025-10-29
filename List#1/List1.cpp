@@ -12,6 +12,7 @@ int task1() {
 	cout << "Enter n: \n";
 	cin >> n;
 	output = (2 * a1 + (n - 1) / 2) * n;
+	cout << "Answer to Task 1 is" << output;
 	return 0;
 }
 
@@ -19,9 +20,9 @@ int task2() {
 	int s = 0, m = 0, h = 0;
 	cout << "Enter amount of secounds: ";
 	cin >> s;
-	m = s / 60; //90 min
+	m = s / 60; 
 	h = m / 60;
-	int s_output = s % 60; //36
+	int s_output = s % 60; 
 	int m_output = m - (60 * h);
 	cout << "Secounds to Time: " << h << ":" << m_output << ":" << s_output;
 	return 0;
