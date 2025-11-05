@@ -8,7 +8,7 @@ int task1() {
 	cout << "Enter x: ";
 	cin >> x;
 	double output = pow(x, 5);
-	cout << "Answer to Task 1 is" << output;
+	cout << "Answer to Task 1 is: " << output;
 	return 0;
 }
 
@@ -29,7 +29,7 @@ int task3() {
 	cout << "Enter x: ";
 	cin >> x;
 	double output = pow(x, 10);
-	cout << "Answer to Task 7 is" << output;
+	cout << "Answer to Task 7 is: " << output;
 	return 0;
 }
 
@@ -126,6 +126,6 @@ int main() {
 	case 7:
 		task7();
 		break;
-		return 0;
 	}
+	return 0;
 }
