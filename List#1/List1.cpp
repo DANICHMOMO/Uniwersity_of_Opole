@@ -39,10 +39,12 @@ int task3() {
 
 int task5() { // same as a task 4
 	const int n = 11;
+	//int a10 = 0, a9 = 0, a8 = 0, a7 = 0, a6 = 0, a5 = 0, a4 = 0, a3 = 0, a2 = 0, a1 = 0, a0 = 0;
 	int a[n];
 	int x, i, output = 0;
-	cout << "Enter 11 coefficients, starting with a10 down to a:\n";
+	cout << "Enter 11 coefficients, starting with a10 down to a0:\n";
 	cout << "(e.g., a10 a9 a8 a7 a6 a5 a4 a3 a2 a1 a)\n";
+	//cin >> a10 >> a9 >> a8 >> a7 >> a6 >> a5 >> a4 >> a3 >> a2 >> a1 >> a0;
 	for (i = 0; i < 11; ++i)
 	{
 		cout << "Enter number a" << i << "\n";
@@ -54,6 +56,8 @@ int task5() { // same as a task 4
 	{
 		output = output * x + a[i];
 	}
+	//output = a10 * pow(x, 10) + a9 * pow(x, 9) + a8 * pow(x, 8) + a7 * pow(x, 7) + a6 * pow(x, 6) + a5 * pow(x, 5) + a4 * pow(x, 4) + a3 * pow(x, 3) + a2 * pow(x, 2) + a1 * x + a0;
+
 	cout << "Answer to Task 5 is: " << output << "\n";
 	return 0;
 }
@@ -132,6 +136,9 @@ int main() {
 		break;
 	case 8:
 		task8();
+		break;
+	default:
+		return 0;
 		break;
 	}
 	return 0;
