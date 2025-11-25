@@ -21,7 +21,8 @@ void task1() {
 }
 
 void task2() {
-	vector<int> a = { 42, 7, 19, 88, 3, 56, 21, 90, 12, 34, 67, 5, 29, 73, 15, 8, 99, 45, 62, 11, 23, 81, 37, 4, 50, 76, 9, 31, 64, 2 };
+	vector<int> a/* = { 42, 7, 19, 88, 3, 56, 21, 90, 12, 34, 67, 5, 29, 73, 15, 8, 99, 45, 62, 11, 23, 81, 37, 4, 50, 76, 9, 31, 64, 2 }*/;
+	// comment array if you want to enter your numbers
 	int x, n;
 	if (a.size() == 0) {
 		cout << "Enter amount of elements in array: ";
@@ -46,8 +47,18 @@ void task2() {
 }
 
 void task3() {
-	int output = 0;
-	vector<int> a = { 42, 7, 19, 88, 3, 56, 21, 90, 12, 34, 67, 5, 29, 73, 15, 8, 99, 45, 62, 11, 23, 81, 37, 4, 50, 76, 9, 31, 64, 2 };
+	int output = 0, n, x;
+	vector<int> a /*= { 42, 7, 19, 88, 3, 56, 21, 90, 12, 34, 67, 5, 29, 73, 15, 8, 99, 45, 62, 11, 23, 81, 37, 4, 50, 76, 9, 31, 64, 2 }*/;
+	if (a.size() == 0) {
+		cout << "Enter amount of elements in array: ";
+		cin >> n;
+		cout << "Give numbers of array: ";
+		for (int i = 0; i < n; i++)
+		{
+			cin >> x;
+			a.push_back(x);
+		}
+	}
 	for (int i = 0; i < a.size(); i++)
 	{
 		output = output + a.at(i);
