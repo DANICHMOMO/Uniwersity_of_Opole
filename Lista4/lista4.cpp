@@ -49,6 +49,7 @@ void task2() {
 void task3() {
 	int output = 0, n, x;
 	vector<int> a /*= { 42, 7, 19, 88, 3, 56, 21, 90, 12, 34, 67, 5, 29, 73, 15, 8, 99, 45, 62, 11, 23, 81, 37, 4, 50, 76, 9, 31, 64, 2 }*/;
+	// comment array if you want to enter your numbers
 	if (a.size() == 0) {
 		cout << "Enter amount of elements in array: ";
 		cin >> n;
