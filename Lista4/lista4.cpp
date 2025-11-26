@@ -89,22 +89,22 @@ void task4() {
 }
 
 void task5() {
-	vector<int> tape;
-	int input;
+	vector<int> a;
+	int x;
 
 	cout << "Enter the sequence (0s and 1s). Enter 2 to finish:" << endl;
-	while (cin >> input) {
-		if (input == 2) {
+	while (cin >> x) {
+		if (x == 2) {
 			break; 
 		}
-		if (input == 0 || input == 1) {
-			tape.push_back(input);
+		if (x == 0 || x == 1) {
+			a.push_back(x);
 		}
 	}
 	int countZeros = 0;
 	int countOnes = 0;
 
-	for (int bit : tape) {
+	for (int bit : a) {
 		if (bit == 0) {
 			countZeros++;
 		}
@@ -114,46 +114,47 @@ void task5() {
 	}
 	bool isZerosEven = (countZeros % 2 == 0);
 	bool isOnesOdd = (countOnes % 2 != 0);
-
-	cout << "--------------------------------" << endl;
 	cout << "Count of 0s: " << countZeros << endl;
 	cout << "Count of 1s: " << countOnes << endl;
 
 	if (isZerosEven && isOnesOdd) {
-		cout << "RESULT: ACCEPTED (Even 0s and Odd 1s)" << endl;
+		cout << "True" << endl;
 	}
 	else {
-		cout << "RESULT: REJECTED" << endl;
+		cout << "False" << endl;
 	}
 }
 
 void task6() {
-	vector<int> tape;
-	int input;
-
-	cout << "Task: Sequence of 1s and 2s (terminate with 0)." << endl;
+	vector<int> a;
+	int x;
 	cout << "Enter numbers:" << endl;
-	while (cin >> input) {
-		if (input == 0) break;
-		if (input == 1 || input == 2) {
-			tape.push_back(input);
+	while (cin >> x) {
+		if (x == 0) break;
+		if (x == 1 || x == 2) {
+			a.push_back(x);
 		}
 	}
 	int countOnes = 0;
 	int countTwos = 0;
 
-	for (int num : tape) {
-		if (num == 1) countOnes++;
-		else if (num == 2) countTwos++;
+	for (int num : a) {
+		if (num == 1) 
+		{
+			countOnes++;
+		}
+		else if (num == 2) 
+		{
+			countTwos++;
+		}
 	}
-	cout << "-----------------" << endl;
 	cout << "Ones: " << countOnes << ", Twos: " << countTwos << endl;
 
 	if (countOnes >= 3 * countTwos) {
-		cout << "RESULT: YES (Condition Met)" << endl;
+		cout << "True" << endl;
 	}
 	else {
-		cout << "RESULT: NO" << endl;
+		cout << "False" << endl;
 	}
 }
 
@@ -182,7 +183,6 @@ void task7() {
 	}
 	if (!evenFound) productEven = 0;
 
-	cout << "-----------------" << endl;
 	cout << "Sum of positive numbers: " << sumPositive << endl;
 	cout << "Product of even numbers: " << productEven << endl;
 }
@@ -190,8 +190,6 @@ void task7() {
 void task8() {
 	int n;
 	double x;
-
-	cout << "Task 8/9: Polynomial Calculation" << endl;
 	cout << "Enter degree of polynomial (n): ";
 	cin >> n;
 
@@ -209,16 +207,12 @@ void task8() {
 	for (int i = 1; i <= n; i++) {
 		result = result * x + coefficients[i];
 	}
-
-	cout << "-----------------" << endl;
 	cout << "Result W(" << x << ") = " << result << endl;
 }
 
 void task9() {
 	int n;
 	double x;
-
-	cout << "Task 8/9: Polynomial Calculation" << endl;
 	cout << "Enter degree of polynomial (n): ";
 	cin >> n;
 
@@ -236,8 +230,6 @@ void task9() {
 	for (int i = 1; i <= n; i++) {
 		result = result * x + coefficients[i];
 	}
-
-	cout << "-----------------" << endl;
 	cout << "Result W(" << x << ") = " << result << endl;
 }
 
