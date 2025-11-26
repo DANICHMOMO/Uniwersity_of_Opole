@@ -62,12 +62,12 @@ void task3() {
 	{
 		for (int j = 0; j < a.size() - i - 1; j++)
 		{
-			if (a[j] > a[j + 1])
+			if (a[j] < a[j + 1])
 				swap(a[j], a[j + 1]);
 		}
 	}
 	cout << "Secound Greatest Array: ";
-	cout << a.at(2);
+	cout << a.at(1);
 }
 
 void task4() {
@@ -95,7 +95,33 @@ void task4() {
 }
 
 void task5() {
-
+	int d, m, y, output;
+	cout << "Give date in format day:month:year : ";
+	cin >> d >> m >> y;
+	output = (d += m < 3 ? y-- : y - 2, 23 * m / 9 + d + 4 + y / 4 - y / 100 + y / 400) % 7;
+	switch (output) {
+	case 1:
+		cout << "Sunday";
+		break;
+	case 2:
+		cout << "Monday";
+		break;
+	case 3:
+		cout << "Tuesday";
+		break;
+	case 4:
+		cout << "Wednesday";
+		break;
+	case 5:
+		cout << "Thursday";
+		break;
+	case 6:
+		cout << "Friday";
+		break;
+	case 7:
+		cout << "Saturday";
+		break;
+	}
 }
 
 int main() {
